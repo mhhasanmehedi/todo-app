@@ -21,7 +21,14 @@ export type Actions = {
 
 export const useTaskStore = create<State & Actions>()(set => ({
   //   Initial State
-  tasks: [],
+  tasks: [
+    {
+      id: 'afdsf',
+      title: 'Our first task',
+      description: 'Some description',
+      status: 'DONE'
+    }
+  ],
 
   //   Add Task Actions
   addTask: (title: string, description?: string) =>
